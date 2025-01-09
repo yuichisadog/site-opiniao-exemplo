@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Contato</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!--BOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!--BOOTSTRAP-->
+  <link rel="stylesheet" href="../CSS/">
+  <script>
+    function verifica() {
+            // Obtendo os valores dos campos do formulário
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let assunto = document.getElementById("assunto").value;
+            let comentario = document.getElementById("comentario").value;
+          
+            // Verificando se o campo nome tem pelo menos 2 caracteres e não está vazio
+            if (nome.length < 2 && nome.trim() === "") {
+                alert("O campo nome deve ter no mínimo 2 caracteres e não ficar vazio. Volte e preencha o campo nome corretamente.");
+            }
+             // Verificando se o campo e-mail tem pelo menos 5 caracteres e não está vazio
+            else if (email.length < 5 && email.trim() === "") {
+                alert("O campo e-mail deve ter no mínimo 5 caracteres e não ficar vazio. Volte e preencha o campo e-mail corretamente.");
+            }
+            // Verificando se o campo assunto tem pelo menos 5 caracteres e não está vazio
+            else if (assunto.length < 5 && assunto.trim() === "") {
+                alert("O campo assunto deve ter no mínimo 5 caracteres e não ficar vazio. Volte e preencha o campo assunto corretamente.");
+            }
+            // Verificando se o campo comentário tem pelo menos 15 caracteres e não está vazio
+            else if (comentario.length < 15 && comentario.trim() === "") {
+                alert("O campo comentário deve ter no mínimo 15 caracteres e não ficar vazio. Volte e preencha o campo comentário corretamente.");
+            } else {
+              alert("Mensagem enviada com sucesso!")
+            }
+           
+        }
+  </script>
+
+
+</head>
+
+<body>
+        <!--MENU-->
+<!--MENU-->
+<nav class="navbar navbar-expand-sm bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html"><img src="../imagem/OPINIAO.png" width="50px" height="50px" alt="logo" id="image_logo"></a>
+    <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon btn-danger"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item bs text-">
+          <a class="nav-link teste text-light" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link teste text-light" href="../paginas/ingressos.html">Ingressos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link teste text-light" href="../paginas/contato.html">Contato</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Procurar">
+        <button class="btn btn-secondary" type="button">Procurar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+        <!--REDES SOCIAIS-->
+        <div class="container-fluid align-items-center">
+          <div class="row m-5">
+            <div class="col">
+              <p class="display-3 text-dark contato_center fs-3" style="font-family: 'Times New Roman', Times, serif;">CONTATOS
+
+              </p>
+              <div class="row">
+                <div class="col">
+                  
+                <div class="mt-1">
+                  <a href="https://www.facebook.com/baropiniao" class="text-light me-1" target="_blank" style="margin: 0; padding: 0;">
+                    <img src="../imagem/Facebook_logo_(square).png" alt="Facebook" style="width: 40px; vertical-align: middle; margin: 0;">
+                  </a>
+                  <a href="https://www.instagram.com/baropiniao" class="text-light  me-1" target="_blank" style="margin: 0; padding: 0;">
+                    <img src="../imagem/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" alt="Instagram" style="width: 50px; vertical-align: middle; margin: 0; height: 50px;">
+                  </a>
+                  <a href="https://www.twitter.com/baropiniao" class="text-light  me-1" style="margin: 0; padding: 0;">
+                    <img src="../imagem/sl_z_072523_61700_01.jpg" alt="Twitter" style="width: 40px; vertical-align: middle; margin: 0;">
+                  </a>
+                 
+                </div>
+              </div>
+              
+            </div>
+            <!--FORMULARIO-->
+            <div class="col">
+              <p class="display-3 text-dark contato_center fs-2 p-3" style="font-family: 'Times New Roman', Times, serif;">Preencha os campos abaixo para entrar em contato com a gente através do nosso email:</p>
+              <form class="was-validated">
+                <div class="form-floating mb-3 mt-3">
+                  <input type="text" class="form-control" id="nome" placeholder="Digite o nome" name="nome" required>
+                  <label for="nome">Nome</label>
+                </div>
+                <div class="form-floating mb-3 mt-3">
+                  <input type="email" class="form-control" id="email" placeholder="Digite o email" name="email" required>
+                  <label for="email">Email</label>
+                </div>
+                <div class="form-floating mb-3 mt-3">
+                  <input type="text" class="form-control" id="assunto" placeholder="Digite o assunto" name="assunto" required>
+                  <label for="assunto">Assunto</label>
+                </div>
+                <div class="form-floating" style="height: 35%;">
+                  <textarea class="form-control" id="comentario" name="comentario" placeholder="Escreva seu comentário" required></textarea>
+                  <label for="comentario">Comentário</label>
+                </div>
+                <div class="row">
+                    <div class="col p-3">
+                      <button type="submit" onclick="verifica()" class="btn btn-secondary">ENVIAR</button>
+                    </div>
+                    
+                </div>
+              </form>  
+            </div>
+          </div>
+        </div>
+        <div class="container img-fluid mt-5">
+          <div class="row">
+            <div class="col-12">
+              <img src="../imagem/fachada-2.jpg" class="img-fluid" alt="Imagem em 1080p" style="max-width: auto; height: auto; padding-bottom: 100px;">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        <!--RODAPÉ-->
+      <footer>
+        
+        <div class="container-fluid bg-dark text-light d-flex justify-content-center" style="margin-top: 5px; padding: 2px 0;">
+          <div class="row w-100 d-flex align-items-center">
+            <!-- Logo e Redes Sociais -->
+            <div class="col-12 col-md-4 text-center" style="padding: 2px;">
+              <p style="font-size: 12px;">Siga-nos nas redes sociais: </p>
+              <div class="mt-1">
+                <a href="https://www.facebook.com/baropiniao" class="text-dark me-1" target="_blank" style="margin: 0; padding: 0;">
+                  <img src="../imagem/Facebook_logo_(square).png" alt="Facebook" style="width: 18px; vertical-align: middle; margin: 0;">
+                </a>
+                <a href="https://www.instagram.com/baropiniao" class="text-dark me-1" target="_blank" style="margin: 0; padding: 0;">
+                  <img src="../imagem/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" alt="Instagram" style="width: 22px; vertical-align: middle; margin: 0;">
+                </a>
+                <a href="https://www.twitter.com/baropiniao" class="text-dark me-1" style="margin: 0; padding: 0;">
+                  <img src="../imagem/sl_z_072523_61700_01.jpg" alt="Twitter" style="width: 18px; vertical-align: middle; margin: 0;">
+                </a>
+              </div>
+            </div>
+            <!-- Informações do Bar -->
+            <div class="col-12 col-md-4 text-center" style="padding: 2px;">
+              <p style="font-size: 15px;"><strong>Bar Opinião</strong> - Porto Alegre</p>
+              <p style="font-size: 12px;">Telefone: (51) 1234-5678</p>
+              <p style="font-size: 12px;">Email: contato@baropiniao.com.br</p>
+              <p style="font-size: 9px;">&copy; 2025 Bar Opinião. Todos os direitos reservados.</p>
+            </div>
+            <!-- Mapa -->
+            <div class="col-12 col-md-4 text-center justify-content-center" style="padding-top: 30px;">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.2231715693686!2d-51.21704852532556!3d-30.03358248180766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197848e3c0657d%3A0x7a1f1c55e06300e4!2sRua%20Jos%C3%A9%20do%20Patroc%C3%ADnio%2C%20834%20-%20Cidade%20Baixa%2C%20Porto%20Alegre%20-%20RS%2C%2090130-100!5e0!3m2!1spt-BR!2sbr!4v1701600000000!5m2!1spt-BR!2sbr" 
+                width="200px" height="200px"style="border:0; vertical-align: middle;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
