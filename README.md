@@ -1,6 +1,6 @@
 # Bar Opinião Website
 
-Este projeto é um site para o Bar Opinião, um bar icônico em Porto Alegre, Brasil. O site fornece informações sobre o bar, eventos futuros, e permite que os usuários entrem em contato com a equipe do bar.
+Este projeto é um site para o Bar Opinião, um bar icônico em Porto Alegre, Brasil. O site fornece informações sobre o bar e eventos futuros
 
 
 ## Descrição dos Arquivos
